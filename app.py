@@ -6,40 +6,15 @@ app = Flask(__name__)
 camera = cv2.VideoCapture(0)
 # Load a sample picture and learn how to recognize it.
 gowtham_image = face_recognition.load_image_file(
-    "face recoginition project/Gowtham/gowtham.jpg")
+    "./Gowtham/gowtham.jpg")
 gowtham_face_encoding = face_recognition.face_encodings(gowtham_image)[0]
-
-# Load a second sample picture and learn how to recognize it.
-divya_image = face_recognition.load_image_file(
-    "face recoginition project/divya/divya.jpg")
-divya_face_encoding = face_recognition.face_encodings(divya_image)[0]
-
-prajeeth_image = face_recognition.load_image_file(
-    "face recoginition project/Prajeeth/prajeeth.jpg")
-prajeeth_face_encoding = face_recognition.face_encodings(prajeeth_image)[0]
-
-anupam_image = face_recognition.load_image_file(
-    "face recoginition project/Anupam/anupam.jpg")
-anupam_face_encoding = face_recognition.face_encodings(anupam_image)[0]
-
-keerthana_image = face_recognition.load_image_file(
-    "face recoginition project/keerthana/keerthana.jpg")
-keerthana_face_encoding = face_recognition.face_encodings(keerthana_image)[0]
 
 # Create arrays of known face encodings and their names
 known_face_encodings = [
-    gowtham_face_encoding,
-    divya_face_encoding,
-    prajeeth_face_encoding,
-    anupam_face_encoding,
-    keerthana_face_encoding
+    gowtham_face_encoding
 ]
 known_face_names = [
-    "gowtham",
-    "divya",
-    "prajeeth",
-    "anupam",
-    "keerthana"
+    "gowtham"
 ]
 # Initialize some variables
 face_locations = []
